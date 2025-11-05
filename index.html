@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Travel Recommender 🌍</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Flying plane -->
+    <div class="plane">✈️</div>
+
+    <h1>🧭 Smart Travel Recommender</h1>
+    <form action="/recommend" method="POST">
+        <label for="country">Your Country:</label>
+        <select name="country" required>
+            {% for c in countries %}
+            <option value="{{ c }}">{{ c }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="interest">Your Travel Interest:</label>
+        <input type="text" name="interest" placeholder="e.g., beaches, temples, adventure" required>
+
+        <button type="submit">Find Destinations</button>
+    </form>
+</body>
+</html>

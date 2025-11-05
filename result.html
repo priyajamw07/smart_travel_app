@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>🌴 Top Recommendations Based on: "{{ interest }}"</h2>
+
+    {% for r in recommendations %}
+    <div class="card">
+        <h3>{{ r.city }} ({{ r.country }})</h3>
+        <p><strong>Best Time:</strong> {{ r.time }}</p>
+        <p><strong>Why Visit:</strong> {{ r.desc }}</p>
+        <p><strong>Travel Type:</strong> {{ r.type }}</p>
+        <p><strong>Estimated Cost:</strong> {{ r.cost }}</p>
+    </div>
+    {% endfor %}
+
+    <a href="/">⬅️ Try Another Search</a>
+</body>
+</html>
