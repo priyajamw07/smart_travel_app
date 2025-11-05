@@ -328,4 +328,4 @@ if st.button("🔍 Show Recommendations"):
         st.success("✈ Explore Destinations with AI-Powered Travel Advisor 🌍")
 
 
->>>>>>> 2763f676 (Initial commit)
+
